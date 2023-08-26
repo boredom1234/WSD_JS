@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Multiplication and Division Calculator</title>
+</head>
+<body>
+<h1>Multiplication and Division Calculator</h1>
+<form>
+<input type="text" id="firstNumber" placeholder="First Number">
+<input type="text" id="secondNumber" placeholder="Second Number">
+<input type="button" value="Multiply" onclick="multiply()">
+<input type="button" value="Divide" onclick="divide()">
+<p id="result"></p>
+</form>
+<script>
+function multiply() {
+  const firstNumber = document.getElementById("firstNumber").value;
+  const secondNumber = document.getElementById("secondNumber").value;
+  const result = firstNumber * secondNumber;
+  document.getElementById("result").innerHTML = result;
+}
+
+function divide() {
+  const firstNumber = document.getElementById("firstNumber").value;
+  const secondNumber = document.getElementById("secondNumber").value;
+  const result = firstNumber / secondNumber;
+  document.getElementById("result").innerHTML = result;
+}
+</script>
+</body>
+</html>
