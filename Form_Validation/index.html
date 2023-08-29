@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Cinzel&display=swap");
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+  </head>
+  <body>
+    <h1>Registration Form</h1>
+    <br />
+    <form id="registrationForm" onsubmit="return validateForm()">
+      <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required />
+        <span id="fullNameError" class="error"></span>
+      </div>
+      <div>
+        <br />
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+        <span id="emailError" class="error"></span>
+      </div>
+      <div>
+        <br />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <span id="passwordError" class="error"></span>
+      </div>
+      <div>
+        <br />
+        <label for="confirmPassword">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+        <span id="confirmPasswordError" class="error"></span>
+      </div>
+      <div>
+        <br />
+        <label for="dob">Date of Birth:</label>
+        <input
+          style="width: 360px; height: 40px"
+          type="date"
+          id="dob"
+          name="dob"
+          required
+        />
+        <span id="dobError" class="error"></span>
+      </div>
+      <br />
+      <div style="display: flex; justify-content: center" class="btn">
+        <button id="btn" type="submit" onclick="success()" disabled>
+          Register
+        </button>
+      </div>
+    </form>
+    <script src="script.js"></script>
+  </body>
+</html>
